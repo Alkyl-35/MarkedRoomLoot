@@ -439,26 +439,25 @@ export class Loot
     private containers(): IItem[]
     {
         const itemId: IItem[] = [];
-        itemId.push({ "_id": "1337774434331278", "_tpl": "5d235bb686f77443f4331278" });
-        itemId.push({ "_id": "1337774334345621", "_tpl": "67600929bd0a0549d70993f6" });
-        itemId.push({ "_id": "1337774234354652", "_tpl": "66bc98a01a47be227a5e956e" });
-        itemId.push({ "_id": "1337774134385416", "_tpl": "567143bf4bdc2d1a0f8b4567" });
-        itemId.push({ "_id": "1337774562535613", "_tpl": "5c127c4486f7745625356c13" });
-        itemId.push({ "_id": "1337774604423522", "_tpl": "59fb023c86f7746d0d4b423c" });
-        itemId.push({ "_id": "1337450112255242", "_tpl": "5b6d9ce188a4501afc1b2b25" });
-        itemId.push({ "_id": "1337774650057273", "_tpl": "59fb042886f7746c5005a7b2" });
-        itemId.push({ "_id": "1337774242482726", "_tpl": "5c0a840b86f7742ffa4f2482" });
-        itemId.push({ "_id": "1337774604423825", "_tpl": "59fb016586f7746d0d4b423a" });
-        itemId.push({ "_id": "1337774012617384", "_tpl": "5c093db286f7740a1b2617e3" });
-        itemId.push({ "_id": "1337774559023584", "_tpl": "5aafbcd986f7745e590fff23" });
-        itemId.push({ "_id": "1337450601595759", "_tpl": "5b7c710788a4506dec015957" });
-        itemId.push({ "_id": "1337774641590776", "_tpl": "5e2af55f86f7746d4159f07c" });
-        itemId.push({ "_id": "1337977215293479", "_tpl": "5857a8bc2459772bad15db29" });
-        itemId.push({ "_id": "1337977290079844", "_tpl": "5857a8b324597729ab0a0e7d" });
-        itemId.push({ "_id": "1337247084564564", "_tpl": "544a11ac4bdc2d470e8b456a" });
-        itemId.push({ "_id": "1337774485952621", "_tpl": "59db794186f77448bc595262" });
-        itemId.push({ "_id": "1337774018671223", "_tpl": "5c093ca986f7740a1867ab12" });
-        
+        itemId.push({ "_id": "1337774434331278", "_tpl": "5d235bb686f77443f4331278" }); //S I C C organizational pouch
+        itemId.push({ "_id": "1337774334345621", "_tpl": "67600929bd0a0549d70993f6" }); //Ballistic plate case
+        itemId.push({ "_id": "1337774234354652", "_tpl": "66bc98a01a47be227a5e956e" }); //Streamer item case
+        itemId.push({ "_id": "1337774134385416", "_tpl": "567143bf4bdc2d1a0f8b4567" }); //Pistol case
+        itemId.push({ "_id": "1337774562535613", "_tpl": "5c127c4486f7745625356c13" }); //Magazine case
+        itemId.push({ "_id": "1337774604423522", "_tpl": "59fb023c86f7746d0d4b423c" }); //Weapon case
+        itemId.push({ "_id": "1337450112255242", "_tpl": "5b6d9ce188a4501afc1b2b25" }); //T H I C C Weapon case
+        itemId.push({ "_id": "1337774650057273", "_tpl": "59fb042886f7746c5005a7b2" }); //Item case
+        itemId.push({ "_id": "1337774242482726", "_tpl": "5c0a840b86f7742ffa4f2482" }); //T H I C C item case
+        itemId.push({ "_id": "1337774604423825", "_tpl": "59fb016586f7746d0d4b423a" }); //Money case
+        itemId.push({ "_id": "1337774012617384", "_tpl": "5c093db286f7740a1b2617e3" }); //Mr. Holodilnick thermal bag
+        itemId.push({ "_id": "1337774559023584", "_tpl": "5aafbcd986f7745e590fff23" }); //Medicine case
+        itemId.push({ "_id": "1337450601595759", "_tpl": "5b7c710788a4506dec015957" }); //Lucky Scav Junk box
+        itemId.push({ "_id": "1337774641590776", "_tpl": "5e2af55f86f7746d4159f07c" }); //Grenade case
+        itemId.push({ "_id": "1337977215293479", "_tpl": "5857a8bc2459772bad15db29" }); //Secure container Gamma
+        itemId.push({ "_id": "1337977290079844", "_tpl": "5857a8b324597729ab0a0e7d" }); //Secure container Beta
+        itemId.push({ "_id": "1337247084564564", "_tpl": "544a11ac4bdc2d470e8b456a" }); //Secure container Alpha
+        itemId.push({ "_id": "1337774485952621", "_tpl": "59db794186f77448bc595262" }); //Secure container Epsilon
+        itemId.push({ "_id": "1337774018671223", "_tpl": "5c093ca986f7740a1867ab12" }); //Secure container Kappa        
         return itemId;
     }
 
@@ -500,7 +499,7 @@ export class Loot
             const matchedSpawnpoint = spawnPoint.itemDistribution.find(x => x.composedKey.key === spawnPointKey);
             if (!matchedSpawnpoint)
             {
-                console.log(`${spawnPointKey} not found`);
+                console.log(`${spawnPointKey} not found for ${locationName}`); //Adding debug details to identify which map does not have spawn points
                 continue;
             }
 
